@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			#header {
+				padding-top: 80px;
+			}
+
+			.profile-pic-wrapper {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 20px;
+			}
+
+			.profile-pic {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 3px solid rgba(255, 255, 255, 0.6);
+				box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+				transition: transform 0.1s ease, box-shadow 0.1s ease;
+			}
+
+			.profile-pic:hover {
+				transform: scale(1.05);
+				box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+			}
+
+			.header-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				animation: slideUp 1s ease forwards;
+                padding-left: 90px;
+			}
+
+			@keyframes slideUp {
+				from {
+					opacity: 0;
+					transform: translateY(40px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main"></div>
+
+			<!-- Header -->
+			<header id="header">
+
+				<!-- Everything wrapped together to slide as one -->
+				<div class="header-content">
+
+					<!-- Profile Picture -->
+					<div class="profile-pic-wrapper">
+						<img 
+							src="image.jpg" 
+							alt="Anshul Chaudhary"
+							class="profile-pic"
+						/>
+					</div>
+
+					<h1>Anshul Chaudhary</h1>
+					<p>Aspiring data analyst &nbsp;&bull;&nbsp; Developing a strong foundation in data analysis principles, automation algorithms, and statistical tools.</p>
+
+					<nav>
+						<ul>
+							
+							
+							<li><a href="https://github.com/Anshulchoudhary0" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/anshul-chaudhary-a15215266/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://x.com/anshul0fficiall" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						</ul>
+					</nav>
+
+				</div>
+			</header>
+
+		</div>
+
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
